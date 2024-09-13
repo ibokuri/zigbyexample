@@ -14,8 +14,8 @@ pub fn main() !void {
     // Here, we define a slice using the `[start..end]` syntax.
     // `slice` begins at `array[1]` and ends just before `array[4]`.
     var array = [5]i32{ 1, 2, 3, 4, 5 };
-    var end: usize = 4;
-    var slice = array[1..end];
+    const end: usize = 4;
+    const slice = array[1..end];
 
     // Functionally, slices are very similar to arrays. You can get their
     // length, index into them, and iterate over them.
@@ -28,7 +28,7 @@ pub fn main() !void {
     // All slices _must_ have a runtime-known length. If, instead, their
     // lengths are compile-time known, the compiler will convert the slice into
     // a single-item array pointer for us.
-    var ptr: *[3]i32 = array[1..4];
+    const ptr: *[3]i32 = array[1..4];
 
     // In practice, single-item array pointers are just like slices.
     // The only real difference is that with array pointers, bounds checking

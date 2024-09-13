@@ -20,7 +20,7 @@ pub fn main() !void {
 
     // To create a single-item pointer, use the `&` operator.
     var v = false;
-    var ptr: *bool = &v;
+    const ptr: *bool = &v;
     print("pointer: {}\n", .{ptr});
 
     // To access the value located at the memory address stored by a
