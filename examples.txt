@@ -9,3 +9,4 @@ While
 For
 If/Else
 Switch
+Types
